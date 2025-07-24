@@ -6,396 +6,6 @@
     <title>Certificates - Sandip Budha</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: #667eea;
-        }
-
-        /* Main Content */
-        main {
-            padding-top: 100px;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .page-title {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Certificates Section */
-        .certificates-section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .certificate-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-            position: relative;
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .certificate-image {
-            height: 250px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-            position: relative;
-        }
-
-        .certificate-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.9);
-            color: #667eea;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .verified-badge {
-            background: rgba(40, 167, 69, 0.9);
-            color: white;
-        }
-
-        .certificate-content {
-            padding: 2rem;
-        }
-
-        .certificate-title {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .certificate-issuer {
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .certificate-description {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .certificate-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .certificate-date {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .certificate-type {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .certificate-skills {
-            margin-bottom: 1.5rem;
-        }
-
-        .skills-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.8rem;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: #f8f9fa;
-            color: #667eea;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            border: 1px solid #e9ecef;
-        }
-
-        .certificate-actions {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .cert-btn {
-            flex: 1;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: #667eea;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #5a6fd8;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-
-        .btn-secondary:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        /* Stats Section */
-        .stats-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: white;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 0;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 2rem;
-            border-radius: 20px 20px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .modal-title {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-        .close {
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-
-        .close:hover {
-            opacity: 0.7;
-        }
-
-        .modal-body {
-            padding: 2rem;
-        }
-
-        .cert-preview {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .certificates-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .page-title {
-                font-size: 2rem;
-            }
-
-            .certificate-meta {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .certificate-actions {
-                flex-direction: column;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
-            }
-        }
-    </style> -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -411,6 +21,9 @@
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
@@ -428,7 +41,7 @@
         <section class="certificates-section">
             <div class="container">
                 <div class="certificates-grid">
-                    <!-- Certificate 1: Full Stack Development -->
+                    <!-- Certificate 1 -->
                     <div class="certificate-card">
                         <div class="certificate-image">
                             <i class="fas fa-code"></i>
@@ -438,7 +51,6 @@
                             <h3 class="certificate-title">Full Stack Web Development</h3>
                             <div class="certificate-issuer">FreeCodeCamp</div>
                             <p class="certificate-description">Comprehensive certification covering frontend and backend development, including React.js, Node.js, Express, and MongoDB. Completed 300+ hours of coursework and projects.</p>
-                            
                             <div class="certificate-meta">
                                 <div class="certificate-date">
                                     <i class="fas fa-calendar"></i>
@@ -446,7 +58,6 @@
                                 </div>
                                 <div class="certificate-type">Online Course</div>
                             </div>
-
                             <div class="certificate-skills">
                                 <div class="skills-title">Skills Learned:</div>
                                 <div class="skills-list">
@@ -456,7 +67,6 @@
                                     <span class="skill-tag">Express.js</span>
                                 </div>
                             </div>
-
                             <div class="certificate-actions">
                                 <a href="#" class="cert-btn btn-primary" onclick="openModal('Full Stack Web Development', 'FreeCodeCamp')">
                                     <i class="fas fa-eye"></i> View Certificate
@@ -467,8 +77,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Certificate 2: JavaScript Algorithms -->
+                    <!-- Certificate 2 -->
                     <div class="certificate-card">
                         <div class="certificate-image">
                             <i class="fab fa-js-square"></i>
@@ -478,7 +87,6 @@
                             <h3 class="certificate-title">JavaScript Algorithms and Data Structures</h3>
                             <div class="certificate-issuer">FreeCodeCamp</div>
                             <p class="certificate-description">Advanced JavaScript certification focusing on algorithms, data structures, and problem-solving techniques. Includes ES6+ features and functional programming concepts.</p>
-                            
                             <div class="certificate-meta">
                                 <div class="certificate-date">
                                     <i class="fas fa-calendar"></i>
@@ -486,7 +94,6 @@
                                 </div>
                                 <div class="certificate-type">Online Course</div>
                             </div>
-
                             <div class="certificate-skills">
                                 <div class="skills-title">Skills Learned:</div>
                                 <div class="skills-list">
@@ -496,7 +103,6 @@
                                     <span class="skill-tag">Problem Solving</span>
                                 </div>
                             </div>
-
                             <div class="certificate-actions">
                                 <a href="#" class="cert-btn btn-primary" onclick="openModal('JavaScript Algorithms and Data Structures', 'FreeCodeCamp')">
                                     <i class="fas fa-eye"></i> View Certificate
@@ -507,8 +113,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Certificate 3: Android Development -->
+                    <!-- Certificate 3 -->
                     <div class="certificate-card">
                         <div class="certificate-image">
                             <i class="fab fa-android"></i>
@@ -518,7 +123,6 @@
                             <h3 class="certificate-title">Android App Development</h3>
                             <div class="certificate-issuer">Google Developers</div>
                             <p class="certificate-description">Complete Android development course covering Java, Android Studio, UI/UX design, and app publishing. Built and deployed multiple Android applications.</p>
-                            
                             <div class="certificate-meta">
                                 <div class="certificate-date">
                                     <i class="fas fa-calendar"></i>
@@ -526,7 +130,6 @@
                                 </div>
                                 <div class="certificate-type">Professional</div>
                             </div>
-
                             <div class="certificate-skills">
                                 <div class="skills-title">Skills Learned:</div>
                                 <div class="skills-list">
@@ -536,7 +139,6 @@
                                     <span class="skill-tag">Material Design</span>
                                 </div>
                             </div>
-
                             <div class="certificate-actions">
                                 <a href="#" class="cert-btn btn-primary" onclick="openModal('Android App Development', 'Google Developers')">
                                     <i class="fas fa-eye"></i> View Certificate
@@ -547,8 +149,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Certificate 4: Python Programming -->
+                    <!-- Certificate 4 -->
                     <div class="certificate-card">
                         <div class="certificate-image">
                             <i class="fab fa-python"></i>
@@ -558,7 +159,6 @@
                             <h3 class="certificate-title">Python for Everybody</h3>
                             <div class="certificate-issuer">University of Michigan (Coursera)</div>
                             <p class="certificate-description">Comprehensive Python programming specialization covering data structures, web scraping, databases, and data visualization using Python libraries.</p>
-                            
                             <div class="certificate-meta">
                                 <div class="certificate-date">
                                     <i class="fas fa-calendar"></i>
@@ -566,7 +166,6 @@
                                 </div>
                                 <div class="certificate-type">University Course</div>
                             </div>
-
                             <div class="certificate-skills">
                                 <div class="skills-title">Skills Learned:</div>
                                 <div class="skills-list">
@@ -576,7 +175,6 @@
                                     <span class="skill-tag">Databases</span>
                                 </div>
                             </div>
-
                             <div class="certificate-actions">
                                 <a href="#" class="cert-btn btn-primary" onclick="openModal('Python for Everybody', 'University of Michigan')">
                                     <i class="fas fa-eye"></i> View Certificate
@@ -587,8 +185,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Certificate 5: Database Management -->
+                    <!-- Certificate 5 -->
                     <div class="certificate-card">
                         <div class="certificate-image">
                             <i class="fas fa-database"></i>
@@ -598,7 +195,6 @@
                             <h3 class="certificate-title">Database Management Systems</h3>
                             <div class="certificate-issuer">Stanford Online</div>
                             <p class="certificate-description">Advanced course on database design, SQL optimization, normalization, and database administration. Covers both SQL and NoSQL databases.</p>
-                            
                             <div class="certificate-meta">
                                 <div class="certificate-date">
                                     <i class="fas fa-calendar"></i>
@@ -606,7 +202,6 @@
                                 </div>
                                 <div class="certificate-type">University Course</div>
                             </div>
-
                             <div class="certificate-skills">
                                 <div class="skills-title">Skills Learned:</div>
                                 <div class="skills-list">
@@ -616,7 +211,6 @@
                                     <span class="skill-tag">SQL Optimization</span>
                                 </div>
                             </div>
-
                             <div class="certificate-actions">
                                 <a href="#" class="cert-btn btn-primary" onclick="openModal('Database Management Systems', 'Stanford Online')">
                                     <i class="fas fa-eye"></i> View Certificate
@@ -627,8 +221,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Certificate 6: IoT Fundamentals -->
+                    <!-- Certificate 6 -->
                     <div class="certificate-card">
                         <div class="certificate-image">
                             <i class="fas fa-microchip"></i>
@@ -638,7 +231,6 @@
                             <h3 class="certificate-title">IoT Fundamentals</h3>
                             <div class="certificate-issuer">Cisco Networking Academy</div>
                             <p class="certificate-description">Introduction to Internet of Things, covering sensors, actuators, microcontrollers, and cloud integration. Hands-on projects with Arduino and Raspberry Pi.</p>
-                            
                             <div class="certificate-meta">
                                 <div class="certificate-date">
                                     <i class="fas fa-calendar"></i>
@@ -646,7 +238,6 @@
                                 </div>
                                 <div class="certificate-type">Professional</div>
                             </div>
-
                             <div class="certificate-skills">
                                 <div class="skills-title">Skills Learned:</div>
                                 <div class="skills-list">
@@ -656,7 +247,6 @@
                                     <span class="skill-tag">Cloud Integration</span>
                                 </div>
                             </div>
-
                             <div class="certificate-actions">
                                 <a href="#" class="cert-btn btn-primary" onclick="openModal('IoT Fundamentals', 'Cisco Networking Academy')">
                                     <i class="fas fa-eye"></i> View Certificate
@@ -724,7 +314,7 @@
     </div>
 
     <!-- Footer -->
-    <footer style="background: #222; color: white; text-align: center; padding: 2rem 0;">
+    <footer>
         <div class="container">
             <p>&copy; 2025 Sandip Budha. All rights reserved. Built with ❤️ in Kathmandu</p>
         </div>

@@ -1,543 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Sandip Budha</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: #667eea;
-        }
-
-        /* Main Content */
-        main {
-            padding-top: 100px;
-            min-height: 100vh;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .page-title {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .about-content {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .profile-large {
-            width: 300px;
-            height: 300px;
-            border-radius: 20px;
-            object-fit: cover;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #333;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #666;
-            text-align: justify;
-        }
-
-        .highlight {
-            color: #667eea;
-            font-weight: 600;
-        }
-
-        /* Education Section */
-        .education {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background: #667eea;
-            border-radius: 50%;
-            top: 20px;
-        }
-
-        .left {
-            left: 0;
-        }
-
-        .right {
-            left: 50%;
-        }
-
-        .right::after {
-            left: -10px;
-        }
-
-        .timeline-content {
-            padding: 2rem;
-            background: white;
-            position: relative;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .timeline-content h4 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-content p {
-            color: #666;
-        }
-
-        .year {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills Section */
-        .skills {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .skill-category {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
-        }
-
-        .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-
-        .skill-level {
-            background: #667eea;
-            color: white;
-            padding: 0.2rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-        }
-
-        /* Interests Section */
-        .interests {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .interest-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .interest-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .interest-card i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .interest-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .profile-large {
-                width: 250px;
-                height: 250px;
-            }
-
-            .page-title {
-                font-size: 2rem;
-            }
-
-            .timeline::after {
-                left: 31px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-
-            .timeline-item::after {
-                left: 21px;
-            }
-
-            .right {
-                left: 0%;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style> -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <nav class="container">
-            <a href="index.html" class="logo">Sandip Budha</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav class="container">
+        <a href="index.html" class="logo">Sandip Budha</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">About Me</h1>
-                <p class="page-subtitle">Passionate Developer & Technology Enthusiast</p>
-            </div>
-        </section>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">About Me</h1>
+          <p class="page-subtitle">
+            Passionate Developer & Technology Enthusiast
+          </p>
+        </div>
+      </section>
 
-        <!-- About Content -->
-        <section class="about-content">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-image">
-                        <div class="profile-large" style="background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h3>Sandip Budha</h3>
-                        <p style="color: #667eea; font-weight: 600;">Full Stack Developer</p>
-                    </div>
-                    <div class="about-text">
-                        <h2>Hello! I'm Sandip</h2>
-                        <p>
-                            I'm a <span class="highlight">passionate full-stack developer</span> based in Kathmandu, Nepal, with a strong foundation in both frontend and backend technologies. My journey in technology began with curiosity about how things work behind the scenes, which led me to explore various programming languages and frameworks.
-                        </p>
-                        <p>
-                            With expertise in <span class="highlight">HTML, CSS, JavaScript, PHP, Python, and MySQL</span>, I enjoy creating dynamic web applications that solve real-world problems. I've also ventured into mobile app development using Android Studio and have hands-on experience with IoT projects using Arduino and Firebase.
-                        </p>
-                        <p>
-                            Currently, I'm actively seeking <span class="highlight">internship opportunities</span> in Kathmandu to apply my skills in a professional environment and contribute to meaningful projects. I believe in continuous learning and staying updated with the latest technologies and industry trends.
-                        </p>
-                        <p>
-                            When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with fellow developers in the tech community.
-                        </p>
-                    </div>
-                </div>
+      <!-- About Content -->
+      <section class="about-content">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-image">
+              <div
+                class="profile-large"
+                style="
+                  background: linear-gradient(135deg, #667eea, #764ba2);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: white;
+                  font-size: 4rem;
+                "
+              >
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>Sandip Budha</h3>
+              <p style="color: #667eea; font-weight: 600">
+                Full Stack Developer
+              </p>
             </div>
-        </section>
+            <div class="about-text">
+              <h2>Hello! I'm Sandip</h2>
+              <p>
+                I'm a
+                <span class="highlight">passionate full-stack developer</span>
+                based in Kathmandu, Nepal, with a strong foundation in both
+                frontend and backend technologies. My journey in technology
+                began with curiosity about how things work behind the scenes,
+                which led me to explore various programming languages and
+                frameworks.
+              </p>
+              <p>
+                With expertise in
+                <span class="highlight"
+                  >HTML, CSS, JavaScript, PHP, Python, and MySQL</span
+                >, I enjoy creating dynamic web applications that solve
+                real-world problems. I've also ventured into mobile app
+                development using Android Studio and have hands-on experience
+                with IoT projects using Arduino and Firebase.
+              </p>
+              <p>
+                Currently, I'm actively seeking
+                <span class="highlight">internship opportunities</span> in
+                Kathmandu to apply my skills in a professional environment and
+                contribute to meaningful projects. I believe in continuous
+                learning and staying updated with the latest technologies and
+                industry trends.
+              </p>
+              <p>
+                When I'm not coding, you'll find me exploring new technologies,
+                contributing to open-source projects, or sharing knowledge with
+                fellow developers in the tech community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Education Section -->
-        <section class="education">
-            <div class="container">
-                <h2 class="section-title">Education & Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item left">
-                        <div class="timeline-content">
-                            <span class="year">2023 - Present</span>
-                            <h3>Bachelor in Computer Science</h3>
-                            <h4>Tribhuvan University, Kathmandu</h4>
-                            <p>Currently pursuing my degree with focus on software engineering, data structures, algorithms, and modern web technologies.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right">
-                        <div class="timeline-content">
-                            <span class="year">2024</span>
-                            <h3>Full Stack Development Bootcamp</h3>
-                            <h4>Online Certification</h4>
-                            <p>Completed intensive bootcamp covering MERN stack, database design, and modern development practices.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item left">
-                        <div class="timeline-content">
-                            <span class="year">2021 - 2023</span>
-                            <h3>Higher Secondary Education</h3>
-                            <h4>Science Faculty, Kathmandu</h4>
-                            <p>Completed with distinction in Physics, Chemistry, Mathematics, and Computer Science.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right">
-                        <div class="timeline-content">
-                            <span class="year">2024</span>
-                            <h3>Freelance Projects</h3>
-                            <h4>Various Clients</h4>
-                            <p>Developed multiple web applications and mobile apps for local businesses and startups.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- Education Section -->
+      <section class="education">
+        <div class="container">
+          <h2 class="section-title">Education & Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <span class="year">2022 - Present</span>
+                <h3>Bachelor in Computer Science</h3>
+                <h4>Tribhuvan University, Kathmandu</h4>
+                <p>
+                  Currently pursuing my degree with focus on software
+                  engineering, data structures, algorithms, and modern web
+                  technologies.
+                </p>
+              </div>
             </div>
-        </section>
+           
+            <div class="timeline-item left">
+              <div class="timeline-content">
+                <span class="year">2018 - 2020</span>
+                <h3>Higher Secondary Education</h3>
+                <h4>Science Faculty, Kathmandu</h4>
+                <p>
+                  Completed with distinction in Physics, Chemistry, Mathematics,
+                  and Computer Science.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
 
-        <!-- Skills Section -->
-        <section class="skills">
-            <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
-                        <ul class="skill-list">
-                            <li>HTML5 <span class="skill-level">Expert</span></li>
-                            <li>CSS3/SASS <span class="skill-level">Expert</span></li>
-                            <li>JavaScript <span class="skill-level">Advanced</span></li>
-                            <li>React.js <span class="skill-level">Intermediate</span></li>
-                            <li>Bootstrap <span class="skill-level">Advanced</span></li>
-                            <li>Responsive Design <span class="skill-level">Expert</span></li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-server"></i> Backend Development</h3>
-                        <ul class="skill-list">
-                            <li>PHP <span class="skill-level">Advanced</span></li>
-                            <li>Python <span class="skill-level">Intermediate</span></li>
-                            <li>Node.js <span class="skill-level">Intermediate</span></li>
-                            <li>MySQL <span class="skill-level">Advanced</span></li>
-                            <li>SQLite <span class="skill-level">Advanced</span></li>
-                            <li>API Development <span class="skill-level">Intermediate</span></li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-mobile-alt"></i> Mobile & IoT</h3>
-                        <ul class="skill-list">
-                            <li>Android Studio <span class="skill-level">Intermediate</span></li>
-                            <li>Flutter <span class="skill-level">Beginner</span></li>
-                            <li>Arduino <span class="skill-level">Advanced</span></li>
-                            <li>Firebase <span class="skill-level">Intermediate</span></li>
-                            <li>IoT Sensors <span class="skill-level">Intermediate</span></li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
-                        <ul class="skill-list">
-                            <li>Git/GitHub <span class="skill-level">Advanced</span></li>
-                            <li>VS Code <span class="skill-level">Expert</span></li>
-                            <li>Figma <span class="skill-level">Intermediate</span></li>
-                            <li>Docker <span class="skill-level">Beginner</span></li>
-                            <li>Linux <span class="skill-level">Intermediate</span></li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- Skills Section -->
+      <section class="skills">
+        <div class="container">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+              <ul class="skill-list">
+                <li>HTML5 <span class="skill-level">Expert</span></li>
+                <li>CSS3 <span class="skill-level">Expert</span></li>
+                <li>JavaScript <span class="skill-level">Beginner</span></li>
+                  Responsive Design <span class="skill-level">Expert</span>
+                </li>
+              </ul>
             </div>
-        </section>
+            <div class="skill-category">
+              <h3><i class="fas fa-server"></i> Backend Development</h3>
+              <ul class="skill-list">
+                <li>Python <span class="skill-level">Intermediate</span></li>
+                <li>PHP <span class="skill-level">Beginner</span></li>
+                <li>Node.js <span class="skill-level">Beginner</span></li>
+                <li>MySQL <span class="skill-level">Advanced</span></li>
+                
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-mobile-alt"></i> Mobile & IoT</h3>
+              <ul class="skill-list">
+                <li>
+                  Expo Go <span class="skill-level">Beginners</span>
+                </li>
+                <li>Arduino <span class="skill-level">Advanced</span></li>
+                </li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+              <ul class="skill-list">
+                <li>Git/GitHub <span class="skill-level">Advanced</span></li>
+                <li>VS Code <span class="skill-level">Expert</span></li>
+                <li>Figma <span class="skill-level">Intermediate</span></li>
+                <li>Linux <span class="skill-level">Intermediate</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Interests Section -->
-        <section class="interests">
-            <div class="container">
-                <h2 class="section-title" style="color: white;">Interests & Hobbies</h2>
-                <div class="interests-grid">
-                    <div class="interest-card">
-                        <i class="fas fa-robot"></i>
-                        <h3>Artificial Intelligence</h3>
-                        <p>Exploring ML algorithms and AI applications in everyday solutions</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-gamepad"></i>
-                        <h3>Game Development</h3>
-                        <p>Creating interactive games using Unity and web-based game engines</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-mountain"></i>
-                        <h3>Photography</h3>
-                        <p>Capturing the beauty of Nepal's landscapes and cultural heritage</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-users"></i>
-                        <h3>Community Service</h3>
-                        <p>Teaching programming to underprivileged students in local communities</p>
-                    </div>
-                </div>
+      <!-- Interests Section -->
+      <section class="interests">
+        <div class="container">
+          <h2 class="section-title" style="color: white">
+            Interests & Hobbies
+          </h2>
+          <div class="interests-grid">
+            <div class="interest-card">
+              <i class="fas fa-robot"></i>
+              <h3>Artificial Intelligence</h3>
+              <p>
+                Exploring ML algorithms and AI applications in everyday
+                solutions
+              </p>
             </div>
-        </section>
+            <div class="interest-card">
+              <i class="fas fa-gamepad"></i>
+              <h3>Cyber Security</h3>
+              <p>
+                Making the world of technology secure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer style="background: #222; color: white; text-align: center; padding: 2rem 0;">
-        <div class="container">
-            <p>&copy; 2025 Sandip Budha. All rights reserved. Built with ❤️ in Kathmandu</p>
-        </div>
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 Sandip Budha. All rights reserved. Built with ❤️ in
+          Kathmandu
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

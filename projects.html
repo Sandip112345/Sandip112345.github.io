@@ -1,722 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Sandip Budha</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: #667eea;
-        }
-
-        /* Main Content */
-        main {
-            padding-top: 100px;
-        }
-
-        .page-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .page-title {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .page-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Filter Buttons */
-        .filter-section {
-            padding: 60px 0 40px;
-            background: white;
-            text-align: center;
-        }
-
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: transparent;
-            color: #667eea;
-            border: 2px solid #667eea;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        /* Projects Grid */
-        .projects-section {
-            padding: 40px 0 80px;
-            background: white;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 3rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-            position: relative;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-image {
-            height: 200px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%);
-            background-size: 20px 20px;
-        }
-
-        .project-status {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.9);
-            color: #667eea;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .status-completed {
-            background: rgba(40, 167, 69, 0.9);
-            color: white;
-        }
-
-        .status-ongoing {
-            background: rgba(255, 193, 7, 0.9);
-            color: white;
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-title {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .project-description {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .project-features {
-            margin-bottom: 1.5rem;
-        }
-
-        .features-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.8rem;
-        }
-
-        .features-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.5rem;
-        }
-
-        .features-list li {
-            font-size: 0.85rem;
-            color: #666;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .features-list i {
-            color: #667eea;
-            font-size: 0.7rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .tech-tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .project-link {
-            text-decoration: none;
-            padding: 0.7rem 1.3rem;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .link-primary {
-            background: #667eea;
-            color: white;
-        }
-
-        .link-primary:hover {
-            background: #5a6fd8;
-            transform: translateY(-2px);
-        }
-
-        .link-secondary {
-            background: transparent;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-
-        .link-secondary:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        /* Stats Section */
-        .stats-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .page-title {
-                font-size: 2rem;
-            }
-
-            .filter-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .project-links {
-                flex-direction: column;
-            }
-
-            .features-list {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style> -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <nav class="container">
-            <a href="index.html" class="logo">Sandip Budha</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav class="container">
+        <a href="index.html" class="logo">Sandip Budha</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">My Projects</h1>
-                <p class="page-subtitle">Showcasing Programming journey and technical skills</p>
-            </div>
-        </section>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-title">My Projects</h1>
+          <p class="page-subtitle">
+            Showcasing Programming journey and technical skills
+          </p>
+        </div>
+      </section>
 
-        <!-- Filter Section -->
-        <section class="filter-section">
-            <div class="container">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="web">Web Development</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                    <button class="filter-btn" data-filter="iot">IoT Projects</button>
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <div class="container">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-btn" data-filter="web">
+              Web Development
+            </button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="iot">IoT Projects</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects-section">
+        <div class="container">
+          <div class="projects-grid">
+            <!-- Project 1: Quiz App -->
+            <div class="project-card" data-category="web">
+              <div class="project-img">
+                <i class="fas fa-question-circle"></i>
+                <div class="project-status status-completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Interactive Quiz Application</h3>
+                <p class="project-description">
+                  A dynamic quiz platform featuring real-time scoring, progress
+                  tracking, and multiple question types. Built with Java with
+                  GUI features for optimal performance and user experience.
+                </p>
+                <div class="project-features">
+                  <div class="features-title">Key Features:</div>
+                  <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Real-time scoring</li>
+                    <li><i class="fas fa-check"></i> Progress tracking</li>
+                    <li><i class="fas fa-check"></i> Local storage support</li>
+                  </ul>
                 </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects-section">
-            <div class="container">
-                <div class="projects-grid">
-                    <!-- Project 1: Quiz App -->
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <i class="fas fa-question-circle"></i>
-                            <div class="project-status status-completed">Completed</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Interactive Quiz Application</h3>
-                            <p class="project-description">A dynamic quiz platform featuring real-time scoring, progress tracking, and multiple question types. Built with Java with Gui features for optimal performance and user experience.</p>
-                            
-                            <div class="project-features">
-                                <div class="features-title">Key Features:</div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Real-time scoring</li>
-                                    <li><i class="fas fa-check"></i> Progress tracking</li>
-                                    <li><i class="fas fa-check"></i> Local storage support</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">Java-GUI</span>
-                            </div>
-                            <div class="project-links">
-                                
-                                <a href="#" class="project-link link-secondary" target="_blank">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: E-Learning Platform -->
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div class="project-status status-completed">Completed</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">E-Learning Management System</h3>
-                            <p class="project-description">Comprehensive learning platform with course management, student enrollment, progress tracking, and interactive assignments. Features admin panel for teachers and student dashboard with video streaming capabilities.</p>
-                            
-                            <div class="project-features">
-                                <div class="features-title">Key Features:</div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Course management</li>
-                                    <li><i class="fas fa-check"></i> Assignment system</li>
-                                    <li><i class="fas fa-check"></i> Grade tracking</li>
-                                    <li><i class="fas fa-check"></i> Discussion forums</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link link-primary" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                                <a href="#" class="project-link link-secondary" target="_blank">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project : Farmers App -->
-                    <div class="project-card" data-category="mobile">
-                        <div class="project-image">
-                            <i class="fas fa-seedling"></i>
-                            <div class="project-status status-completed">Completed</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Smart Farmers Mobile App</h3>
-                            <p class="project-description">Android application helping farmers with crop management, weather updates, market prices, and agricultural tips. Designed specifically for Nepali farmers with multi-language support and offline capabilities.</p>
-                            
-                            <div class="project-features">
-                                <div class="features-title">Key Features:</div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Crop management</li>
-                                    <li><i class="fas fa-check"></i> Weather forecasts</li>
-                                    <li><i class="fas fa-check"></i> Market prices</li>
-                                    <li><i class="fas fa-check"></i> Agricultural tips</li>
-                                    <li><i class="fas fa-check"></i> Multi-language</li>
-                                    <li><i class="fas fa-check"></i> Offline support</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">Expo Go</span>
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Machine Learning</span>
-                            </div>
-                            <div class="project-links">
-                            
-                                <a href="#" class="project-link link-secondary" target="_blank">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project : IoT Fire Detection -->
-                    <div class="project-card" data-category="iot">
-                        <div class="project-image">
-                            <i class="fas fa-fire"></i>
-                            <div class="project-status status-completed">Completed</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">IoT Fire Detection System</h3>
-                            <p class="project-description">Smart fire detection system using Arduino, smoke sensors, and real-time alerts. Integrates with Firebase for remote monitoring and mobile notifications with SMS alerts and web dashboard for monitoring.</p>
-                            
-                            <div class="project-features">
-                                <div class="features-title">Key Features:</div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Smoke detection</li>
-                                    <li><i class="fas fa-check"></i> Temperature monitoring</li>
-                                    <li><i class="fas fa-check"></i> Real-time alerts</li>
-                                    <li><i class="fas fa-check"></i> Mobile notifications</li>
-                                    <li><i class="fas fa-check"></i> SMS alerts</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">Arduino</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">C++</span>
-                                <span class="tech-tag">IoT Sensors</span>
-                            </div>
-                            <!-- <div class="project-links">
-                                <a href="#" class="project-link link-primary" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Demo Video
-                                </a>
-                    
-                            </div> -->
-                        </div>
-                    </div>
-
-                    <!-- Project : E-Library -->
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <i class="fas fa-book"></i>
-                            <div class="project-status status-ongoing">In Progress</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">E-Kitab</h3>
-                            <p class="project-description">A Book store or library system with user able to buy or borrow books from it.</p>
-                            
-                            <div class="project-features">
-                                <div class="features-title">Key Features:</div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Book cataloging</li>
-                                    <li><i class="fas fa-check"></i> User management</li>
-                                    <li><i class="fas fa-check"></i> Digital reading</li>
-                                    <li><i class="fas fa-check"></i> Search engine</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Express.js</span>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                    
-
-                    <!-- Project: Portfolio Website -->
-                    <div class="project-card" data-category="web">
-                        <div class="project-image">
-                            <i class="fas fa-user-tie"></i>
-                            <div class="project-status status-completed">Completed</div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Personal Portfolio Website</h3>
-                            <p class="project-description">Modern, responsive portfolio website showcasing projects, skills, and experience. Features smooth animations, contact forms, and optimized performance with clean, professional design and SEO optimization.</p>
-                            
-                            <div class="project-features">
-                                <div class="features-title">Key Features:</div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> Responsive design</li>
-                                    <li><i class="fas fa-check"></i> Smooth animations</li>
-                                    <li><i class="fas fa-check"></i> Contact forms</li>
-                                    <li><i class="fas fa-check"></i> SEO optimized</li>
-                                    <li><i class="fas fa-check"></i> Fast loading</li>
-                                    <li><i class="fas fa-check"></i> GitHub Pages</li>
-                                </ul>
-                            </div>
-
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">GitHub Pages</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link link-primary" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Visit Site
-                                </a>
-                                <a href="#" class="project-link link-secondary" target="_blank">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-tech">
+                  <span class="tech-tag">Java-GUI</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Technologies Mastered</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">0</div>
-                        <div class="stat-label">Years of Experience</div>
-                    </div>
-                    
+                <div class="project-links">
+                  <a
+                    href="#"
+                    class="project-link link-secondary"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
                 </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Project 2: E-Learning Platform -->
+            <div class="project-card" data-category="web">
+              <div class="project-img">
+                <i class="fas fa-graduation-cap"></i>
+                <div class="project-status status-completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">E-Learning Management System</h3>
+                <p class="project-description">
+                  Comprehensive learning platform with course management,
+                  student enrollment, progress tracking, and interactive
+                  assignments. Features admin panel for teachers and student
+                  dashboard with video streaming capabilities.
+                </p>
+                <div class="project-features">
+                  <div class="features-title">Key Features:</div>
+                  <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Course management</li>
+                    <li><i class="fas fa-check"></i> Assignment system</li>
+                    <li><i class="fas fa-check"></i> Grade tracking</li>
+                    <li><i class="fas fa-check"></i> Discussion forums</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link link-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link link-secondary"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project : Farmers App -->
+            <div class="project-card" data-category="mobile">
+              <div class="project-img">
+                <i class="fas fa-seedling"></i>
+                <div class="project-status status-completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Smart Farmers Mobile App</h3>
+                <p class="project-description">
+                  Android application helping farmers with crop management,
+                  weather updates, market prices, and agricultural tips.
+                  Designed specifically for Nepali farmers with multi-language
+                  support and offline capabilities.
+                </p>
+                <div class="project-features">
+                  <div class="features-title">Key Features:</div>
+                  <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Crop management</li>
+                    <li><i class="fas fa-check"></i> Weather forecasts</li>
+                    <li><i class="fas fa-check"></i> Market prices</li>
+                    <li><i class="fas fa-check"></i> Agricultural tips</li>
+                    <li><i class="fas fa-check"></i> Multi-language</li>
+                    <li><i class="fas fa-check"></i> Offline support</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">Expo Go</span>
+                  <span class="tech-tag">React Native</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">Machine Learning</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="#"
+                    class="project-link link-secondary"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project : IoT Fire Detection -->
+            <div class="project-card" data-category="iot">
+              <div class="project-img">
+                <i class="fas fa-fire"></i>
+                <div class="project-status status-completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">IoT Fire Detection System</h3>
+                <p class="project-description">
+                  Smart fire detection system using Arduino, smoke sensors, and
+                  real-time alerts. Integrates with Firebase for remote
+                  monitoring and mobile notifications with SMS alerts and web
+                  dashboard for monitoring.
+                </p>
+                <div class="project-features">
+                  <div class="features-title">Key Features:</div>
+                  <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Smoke detection</li>
+                    <li><i class="fas fa-check"></i> Temperature monitoring</li>
+                    <li><i class="fas fa-check"></i> Real-time alerts</li>
+                    <li><i class="fas fa-check"></i> Mobile notifications</li>
+                    <li><i class="fas fa-check"></i> SMS alerts</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">Arduino</span>
+                  <span class="tech-tag">Firebase</span>
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">IoT Sensors</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project : E-Library -->
+            <div class="project-card" data-category="web">
+              <div class="project-img">
+                <i class="fas fa-book"></i>
+                <div class="project-status status-ongoing">In Progress</div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">E-Kitab</h3>
+                <p class="project-description">
+                  A Book store or library system with user able to buy or borrow
+                  books from it.
+                </p>
+                <div class="project-features">
+                  <div class="features-title">Key Features:</div>
+                  <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Book cataloging</li>
+                    <li><i class="fas fa-check"></i> User management</li>
+                    <li><i class="fas fa-check"></i> Digital reading</li>
+                    <li><i class="fas fa-check"></i> Search engine</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Express.js</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project: Portfolio Website -->
+            <div class="project-card" data-category="web">
+              <div class="project-img">
+                <i class="fas fa-user-tie"></i>
+                <div class="project-status status-completed">Completed</div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Personal Portfolio Website</h3>
+                <p class="project-description">
+                  Modern, responsive portfolio website showcasing projects,
+                  skills, and experience. Features smooth animations, contact
+                  forms, and optimized performance with clean, professional
+                  design and SEO optimization.
+                </p>
+                <div class="project-features">
+                  <div class="features-title">Key Features:</div>
+                  <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Responsive design</li>
+                    <li><i class="fas fa-check"></i> Smooth animations</li>
+                    <li><i class="fas fa-check"></i> Contact forms</li>
+                    <li><i class="fas fa-check"></i> SEO optimized</li>
+                    <li><i class="fas fa-check"></i> Fast loading</li>
+                    <li><i class="fas fa-check"></i> GitHub Pages</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">GitHub Pages</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link link-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Visit Site
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link link-secondary"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Technologies Mastered</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Years of Experience</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer style="background: #222; color: white; text-align: center; padding: 2rem 0;">
-        <div class="container">
-            <p>&copy; 2025 Sandip Budha. All rights reserved. Built with ❤️ in Kathmandu</p>
-        </div>
+    <footer
+      style="
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+      "
+    >
+      <div class="container">
+        <p>
+          &copy; 2025 Sandip Budha. All rights reserved. Built with ❤️ in
+          Kathmandu
+        </p>
+      </div>
     </footer>
 
     <script>
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+      // Filter functionality
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          // Add active class to clicked button
+          button.classList.add("active");
 
-                const filterValue = button.getAttribute('data-filter');
+          const filterValue = button.getAttribute("data-filter");
 
-                projectCards.forEach(card => {
-                    if (filterValue === 'all') {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeIn 0.5s ease';
-                    } else if (card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeIn 0.5s ease';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+          projectCards.forEach((card) => {
+            if (filterValue === "all") {
+              card.style.display = "block";
+              card.style.animation = "fadeIn 0.5s ease";
+            } else if (card.getAttribute("data-category") === filterValue) {
+              card.style.display = "block";
+              card.style.animation = "fadeIn 0.5s ease";
+            } else {
+              card.style.display = "none";
+            }
+          });
         });
+      });
 
-        // Add fade-in animation
-        const style = document.createElement('style');
-        style.textContent = `
+      // Add fade-in animation
+      const style = document.createElement("style");
+      style.textContent = `
             @keyframes fadeIn {
                 from { opacity: 0; transform: translateY(20px); }
                 to { opacity: 1; transform: translateY(0); }
             }
         `;
-        document.head.appendChild(style);
+      document.head.appendChild(style);
 
-        // Animate stats on scroll
-        const observerOptions = {
-            threshold: 0.5
-        };
+      // Animate stats on scroll
+      const observerOptions = {
+        threshold: 0.5,
+      };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = entry.target.querySelectorAll('.stat-number');
-                    statNumbers.forEach(stat => {
-                        const finalValue = stat.textContent;
-                        const numericValue = parseInt(finalValue);
-                        if (!isNaN(numericValue)) {
-                            animateCounter(stat, numericValue, finalValue);
-                        }
-                    });
-                }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll(".stat-number");
+            statNumbers.forEach((stat) => {
+              const finalValue = stat.textContent;
+              const numericValue = parseInt(finalValue);
+              if (!isNaN(numericValue)) {
+                animateCounter(stat, numericValue, finalValue);
+              }
             });
-        }, observerOptions);
+          }
+        });
+      }, observerOptions);
 
-        observer.observe(document.querySelector('.stats-section'));
+      observer.observe(document.querySelector(".stats-section"));
 
-        function animateCounter(element, target, finalText) {
-            let current = 0;
-            const increment = target / 50;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = finalText;
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current) + (finalText.includes('+') ? '+' : '');
-                }
-            }, 30);
-        }
+      function animateCounter(element, target, finalText) {
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            element.textContent = finalText;
+            clearInterval(timer);
+          } else {
+            element.textContent =
+              Math.floor(current) + (finalText.includes("+") ? "+" : "");
+          }
+        }, 30);
+      }
     </script>
-</body>
+  </body>
 </html>

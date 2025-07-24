@@ -12,423 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: #f8f9fa;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Header */
-      header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-      }
-
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #667eea;
-        text-decoration: none;
-      }
-
-      .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      .nav-links a:hover,
-      .nav-links a.active {
-        color: #667eea;
-      }
-
-      /* Main Content */
-      main {
-        padding-top: 100px;
-      }
-
-      .page-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        text-align: center;
-        padding: 80px 0;
-      }
-
-      .page-title {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-
-      .page-subtitle {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        margin-bottom: 2rem;
-      }
-
-      .download-btn {
-        background: white;
-        color: #667eea;
-        padding: 1rem 2rem;
-        border: none;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        transition: all 0.3s ease;
-      }
-
-      .download-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Resume Content */
-      .resume-content {
-        padding: 80px 0;
-        background: white;
-      }
-
-      .resume-container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 4rem;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      /* Left Sidebar */
-      .resume-sidebar {
-        background: #f8f9fa;
-        padding: 2rem;
-        border-radius: 15px;
-        height: fit-content;
-      }
-
-      .profile-section {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      .profile-img-resume {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 3rem;
-      }
-
-      .profile-section h2 {
-        color: #333;
-        margin-bottom: 0.5rem;
-      }
-
-      .profile-section p {
-        color: #667eea;
-        font-weight: 600;
-      }
-
-      .sidebar-section {
-        margin-bottom: 2rem;
-      }
-
-      .sidebar-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 1rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid #667eea;
-      }
-
-      .contact-info {
-        list-style: none;
-      }
-
-      .contact-info li {
-        margin-bottom: 0.8rem;
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-      }
-
-      .contact-info i {
-        color: #667eea;
-        width: 20px;
-      }
-
-      .skills-list {
-        list-style: none;
-      }
-
-      .skill-item {
-        margin-bottom: 1rem;
-      }
-
-      .skill-name {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.3rem;
-        font-weight: 500;
-      }
-
-      .skill-bar {
-        background: #e9ecef;
-        height: 6px;
-        border-radius: 3px;
-        overflow: hidden;
-      }
-
-      .skill-progress {
-        height: 100%;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        border-radius: 3px;
-        transition: width 2s ease;
-      }
-
-      .languages-list {
-        list-style: none;
-      }
-
-      .languages-list li {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.5rem;
-      }
-
-      .language-level {
-        color: #667eea;
-        font-weight: 500;
-      }
-
-      /* Main Content */
-      .resume-main {
-        padding-left: 2rem;
-      }
-
-      .section {
-        margin-bottom: 3rem;
-      }
-
-      .section-title {
-        font-size: 1.8rem;
-        color: #333;
-        margin-bottom: 2rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid #667eea;
-      }
-
-      .summary {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: #666;
-        text-align: justify;
-      }
-
-      .timeline {
-        position: relative;
-      }
-
-      .timeline::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-      }
-
-      .timeline-item {
-        position: relative;
-        padding-left: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: -5px;
-        top: 0;
-        width: 12px;
-        height: 12px;
-        background: #667eea;
-        border-radius: 50%;
-      }
-
-      .timeline-date {
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        color: white;
-        padding: 0.3rem 1rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        display: inline-block;
-        margin-bottom: 0.5rem;
-      }
-
-      .timeline-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 0.3rem;
-      }
-
-      .timeline-company {
-        color: #667eea;
-        font-weight: 500;
-        margin-bottom: 0.8rem;
-      }
-
-      .timeline-description {
-        color: #666;
-        line-height: 1.6;
-      }
-
-      .timeline-description ul {
-        margin-top: 0.5rem;
-        padding-left: 1.5rem;
-      }
-
-      .timeline-description li {
-        margin-bottom: 0.3rem;
-      }
-
-      /* Projects Summary */
-      .projects-summary {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .project-summary-card {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 10px;
-        border-left: 4px solid #667eea;
-      }
-
-      .project-summary-card h4 {
-        color: #333;
-        margin-bottom: 0.5rem;
-      }
-
-      .project-summary-card p {
-        color: #666;
-        font-size: 0.9rem;
-        margin-bottom: 0.8rem;
-      }
-
-      .project-tech-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.3rem;
-      }
-
-      .tech-tag {
-        background: #667eea;
-        color: white;
-        padding: 0.2rem 0.6rem;
-        border-radius: 12px;
-        font-size: 0.7rem;
-      }
-
-      /* Print Styles */
-      @media print {
-        header,
-        .page-header,
-        footer {
-          display: none;
-        }
-
-        main {
-          padding-top: 0;
-        }
-
-        .resume-content {
-          padding: 20px 0;
-        }
-
-        .resume-container {
-          grid-template-columns: 1fr 2fr;
-          gap: 2rem;
-        }
-
-        body {
-          background: white;
-        }
-
-        .resume-sidebar {
-          background: #f8f9fa;
-        }
-
-        .download-btn {
-          display: none;
-        }
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .resume-container {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-        }
-
-        .resume-main {
-          padding-left: 0;
-        }
-
-        .page-title {
-          font-size: 2rem;
-        }
-
-        .projects-summary {
-          grid-template-columns: 1fr;
-        }
-
-        .nav-links {
-          display: none;
-        }
-      }
-    </style> -->
     <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
@@ -444,22 +27,26 @@
           <li><a href="resume.html" class="active">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
       <!-- Page Header -->
-      <section class="page-header">
+      <section class="page-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
         <div class="container">
           <h1 class="page-title">My Resume</h1>
           <p class="page-subtitle">
             Programmer seeking internship opportunities in Kathmandu
           </p>
           <a
-            href="assets\images\Sandip_Budha_CV.pdf"
+            href="assets/images/Sandip_Budha_CV.pdf"
             class="download-btn"
-            onclick="window.print()"
+            target="_blank"
+            style="background: #fff; color: #667eea;"
           >
             <i class="fas fa-download"></i>
             Download PDF
@@ -468,55 +55,55 @@
       </section>
 
       <!-- Resume Content -->
-      <section class="resume-content">
+      <section class="resume-content" style="background: #fff; color: #333;">
         <div class="container">
-          <div class="resume-container">
+          <div class="resume-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
             <!-- Left Sidebar -->
-            <div class="resume-sidebar">
+            <aside class="resume-sidebar">
               <!-- Profile -->
               <div class="profile-section">
                 <div class="profile-img-resume">
                   <i class="fas fa-user"></i>
                 </div>
-                <h2>Sandip Budha</h2>
-                <p>Full Stack Developer</p>
+                <h2 style="color: #333;">Sandip Budha</h2>
+                <p style="color: #667eea;">Full Stack Developer</p>
               </div>
 
               <!-- Contact Information -->
               <div class="sidebar-section">
-                <h3 class="sidebar-title">Contact</h3>
+                <h3 class="sidebar-title" style="color: #333;">Contact</h3>
                 <ul class="contact-info">
                   <li>
                     <i class="fas fa-envelope"></i>
-                    <span>sandybudha62@gmail.com</span>
+                    <span style="color: #333;">sandybudha62@gmail.com</span>
                   </li>
                   <li>
                     <i class="fas fa-phone"></i>
-                    <span>+977 9863081555</span>
+                    <span style="color: #333;">+977 9863081555</span>
                   </li>
                   <li>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Kathmandu, Nepal</span>
+                    <span style="color: #333;">Kathmandu, Nepal</span>
                   </li>
                   <li>
                     <i class="fab fa-github"></i>
-                    <span>github.com/Sandip112345</span>
+                    <a href="https://github.com/Sandip112345" target="_blank" style="color: #333;">github.com/Sandip112345</a>
                   </li>
                   <li>
                     <i class="fab fa-linkedin"></i>
-                    <span>linkedin.com/in/sandipbudha</span>
+                    <a href="https://www.linkedin.com/in/sandip-budha-632a61287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #333;">linkedin.com/in/sandipbudha</a>
                   </li>
                 </ul>
               </div>
 
               <!-- Skills -->
               <div class="sidebar-section">
-                <h3 class="sidebar-title">Technical Skills</h3>
+                <h3 class="sidebar-title" style="color: #333;">Technical Skills</h3>
                 <ul class="skills-list">
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span>Python</span>
-                      <span>90%</span>
+                      <span style="color: #333;">Python</span>
+                      <span style="color: #333;">90%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 90%"></div>
@@ -524,8 +111,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span>HTML5/CSS3</span>
-                      <span>80%</span>
+                      <span style="color: #333;">HTML5/CSS3</span>
+                      <span style="color: #333;">80%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 80%"></div>
@@ -533,8 +120,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span>JavaScript</span>
-                      <span>50%</span>
+                      <span style="color: #333;">JavaScript</span>
+                      <span style="color: #333;">50%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 50%"></div>
@@ -542,8 +129,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span>PHP</span>
-                      <span>60%</span>
+                      <span style="color: #333;">PHP</span>
+                      <span style="color: #333;">60%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 60%"></div>
@@ -551,8 +138,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span>MySQL</span>
-                      <span>85%</span>
+                      <span style="color: #333;">MySQL</span>
+                      <span style="color: #333;">85%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 85%"></div>
@@ -563,30 +150,30 @@
 
               <!-- Languages -->
               <div class="sidebar-section">
-                <h3 class="sidebar-title">Languages</h3>
+                <h3 class="sidebar-title" style="color: #333;">Languages</h3>
                 <ul class="languages-list">
                   <li>
-                    <span>Nepali</span>
-                    <span class="language-level">Native</span>
+                    <span style="color: #333;">Nepali</span>
+                    <span class="language-level" style="color: #667eea;">Native</span>
                   </li>
                   <li>
-                    <span>English</span>
-                    <span class="language-level">Fluent</span>
+                    <span style="color: #333;">English</span>
+                    <span class="language-level" style="color: #667eea;">Fluent</span>
                   </li>
                   <li>
-                    <span>Hindi</span>
-                    <span class="language-level">Conversational</span>
+                    <span style="color: #333;">Hindi</span>
+                    <span class="language-level" style="color: #667eea;">Conversational</span>
                   </li>
                 </ul>
               </div>
-            </div>
+            </aside>
 
             <!-- Main Content -->
-            <div class="resume-main">
+            <section class="resume-main" style="flex: 1 1 400px;">
               <!-- Professional Summary -->
               <div class="section">
-                <h2 class="section-title">Professional Summary</h2>
-                <p class="summary">
+                <h2 class="section-title" style="color: #333;">Professional Summary</h2>
+                <p class="summary" style="color: #666;">
                   Motivated and detail-oriented Computer Science undergraduate
                   specializing in Cybersecurity, with a strong foundation in
                   programming, web development, and IoT systems. Proficient in
@@ -604,33 +191,33 @@
 
               <!-- Education -->
               <div class="section">
-                <h2 class="section-title">Education</h2>
+                <h2 class="section-title" style="color: #333;">Education</h2>
                 <div class="timeline">
                   <div class="timeline-item">
-                    <div class="timeline-date">2022 - Present</div>
-                    <h3 class="timeline-title">Bachelor in Computer Science</h3>
-                    <p class="timeline-company">
-                      IIMS College Affilated with Taylors University, Kathmandu
+                    <div class="timeline-date" style="color: #667eea;">2022 - Present</div>
+                    <h3 class="timeline-title" style="color: #333;">Bachelor in Computer Science</h3>
+                    <p class="timeline-company" style="color: #666;">
+                      IIMS College Affiliated with Taylors University, Kathmandu
                     </p>
                     <div class="timeline-description">
-                      <p>Currently pursuing Bachelor's degree with focus on:</p>
+                      <p style="color: #666;">Currently pursuing Bachelor's degree with focus on:</p>
                       <ul>
-                        <li>Software Engineering and Development</li>
-                        <li>Database Management Systems</li>
-                        <li>Web Technologies and Programming</li>
-                        <li>Cybersecurity specialization/li>
+                        <li style="color: #666;">Software Engineering and Development</li>
+                        <li style="color: #666;">Database Management Systems</li>
+                        <li style="color: #666;">Web Technologies and Programming</li>
+                        <li style="color: #666;">Cybersecurity specialization</li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2022</div>
-                    <h3 class="timeline-title">
+                    <div class="timeline-date" style="color: #667eea;">2019 - 2022</div>
+                    <h3 class="timeline-title" style="color: #333;">
                       Higher Secondary Education (+2 Science)
                     </h3>
-                    <p class="timeline-company">Galaxy Higher Secondary School, Dhangadhi</p>
+                    <p class="timeline-company" style="color: #666;">Galaxy Higher Secondary School, Dhangadhi</p>
                     <div class="timeline-description">
-                      <p>
+                      <p style="color: #666;">
                         Completed with 3.34 and 3.08 GPAs in 11th and 12th respectively with Science Major.
                       </p>
                     </div>
@@ -640,44 +227,43 @@
 
               <!-- Experience -->
               <div class="section">
-                <h2 class="section-title">Experience</h2>
+                <h2 class="section-title" style="color: #333;">Experience</h2>
                 <div class="timeline">
                   <div class="timeline-item">
-                    <div class="timeline-date">2024 - Present</div>
-                    <h3 class="timeline-title">Student</h3>
-                    <p class="timeline-company">Self-Employed</p>
+                    <div class="timeline-date" style="color: #667eea;">2024 - Present</div>
+                    <h3 class="timeline-title" style="color: #333;">Student</h3>
+                    <p class="timeline-company" style="color: #666;">Self-Employed</p>
                     <div class="timeline-description">
-                      <p>
+                      <p style="color: #666;">
                         Developed web applications and mobile apps for college projects:
                       </p>
                       <ul>
-                        <li>
+                        <li style="color: #666;">
                           Built responsive websites using HTML5, CSS3, and
                           JavaScript
                         </li>
-                        <li>
+                        <li style="color: #666;">
                           Developed E-Library solutions with PHP and MySQL
                         </li>
-                        <li>
+                        <li style="color: #666;">
                           Created mobile applications using React Native and Expo
                         </li>
-                        <li>
+                        <li style="color: #666;">
                           Implemented IoT solutions for smart fire detection systems
                         </li>
                       </ul>
                     </div>
-                  </div>
                   </div>
                 </div>
               </div>
 
               <!-- Key Projects -->
               <div class="section">
-                <h2 class="section-title">Key Projects</h2>
+                <h2 class="section-title" style="color: #333;">Key Projects</h2>
                 <div class="projects-summary">
                   <div class="project-summary-card">
-                    <h4>E-Learning Management System</h4>
-                    <p>
+                    <h4 style="color: #333;">E-Learning Management System</h4>
+                    <p style="color: #666;">
                       Comprehensive learning platform with course management,
                       student enrollment, and progress tracking.
                     </p>
@@ -688,8 +274,8 @@
                   </div>
 
                   <div class="project-summary-card">
-                    <h4>Smart Farmers Mobile App</h4>
-                    <p>
+                    <h4 style="color: #333;">Smart Farmers Mobile App</h4>
+                    <p style="color: #666;">
                       Android application helping farmers with crop management
                       and weather updates.
                     </p>
@@ -701,8 +287,8 @@
                   </div>
 
                   <div class="project-summary-card">
-                    <h4>IoT Fire Detection System</h4>
-                    <p>
+                    <h4 style="color: #333;">IoT Fire Detection System</h4>
+                    <p style="color: #666;">
                       Smart fire detection system using Arduino and real-time
                       alerts via Firebase.
                     </p>
@@ -713,77 +299,25 @@
                   </div>
 
                   <div class="project-summary-card">
-                    <h4>Interactive Quiz Application</h4>
-                    <p>
+                    <h4 style="color: #333;">Interactive Quiz Application</h4>
+                    <p style="color: #666;">
                       Dynamic quiz platform with real-time scoring and progress
                       tracking.
                     </p>
                     <div class="project-tech-tags">
                       <span class="tech-tag">Java-GUI</span>
-                      
                     </div>
                   </div>
                 </div>
               </div>
-
-              <!-- Achievements -->
-              <!-- <div class="section">
-                <h2 class="section-title">Achievements & Certifications</h2>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <h3 class="timeline-title">
-                      Full Stack Web Development Certification
-                    </h3>
-                    <p class="timeline-company">FreeCodeCamp</p>
-                    <div class="timeline-description">
-                      <p>
-                        Completed 300+ hours of coursework covering React.js,
-                        Node.js, Express, and MongoDB.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <h3 class="timeline-title">Android App Development</h3>
-                    <p class="timeline-company">Google Developers</p>
-                    <div class="timeline-description">
-                      <p>
-                        Professional certification in Android development with
-                        Java and Android Studio.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <h3 class="timeline-title">Best Project Award</h3>
-                    <p class="timeline-company">College Tech Fest</p>
-                    <div class="timeline-description">
-                      <p>
-                        Won first place for IoT Fire Detection System at annual
-                        college technology festival.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            </div>
+            </section>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer
-      style="
-        background: #222;
-        color: white;
-        text-align: center;
-        padding: 2rem 0;
-      "
-    >
+    <footer>
       <div class="container">
         <p>
           &copy; 2025 Sandip Budha. All rights reserved. Built with ❤️ in
@@ -792,54 +326,6 @@
       </div>
     </footer>
 
-    <script>
-      // Animate skill bars on scroll
-      const observerOptions = {
-        threshold: 0.3,
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const skillBars = entry.target.querySelectorAll(".skill-progress");
-            skillBars.forEach((bar) => {
-              const width = bar.style.width;
-              bar.style.width = "0%";
-              setTimeout(() => {
-                bar.style.width = width;
-              }, 200);
-            });
-          }
-        });
-      }, observerOptions);
-
-      observer.observe(document.querySelector(".resume-sidebar"));
-
-      // Print functionality
-      function printResume() {
-        window.print();
-      }
-
-      // Add smooth animations to timeline items
-      const timelineItems = document.querySelectorAll(".timeline-item");
-      const timelineObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateX(0)";
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-
-      timelineItems.forEach((item) => {
-        item.style.opacity = "0";
-        item.style.transform = "translateX(-20px)";
-        item.style.transition = "all 0.6s ease";
-        timelineObserver.observe(item);
-      });
-    </script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
