@@ -8,26 +8,14 @@
 
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle (vertical, with close button)
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-    const navClose = document.querySelector('.nav-close');
-    if (mobileMenu && navLinks && navClose) {
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        });
-        navClose.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                document.body.style.overflow = '';
-            });
-        });
-    }
+    initializeNavigation();
+    initializeAnimations();
+    initializeFormHandling();
+    initializeUtilities();
+    initializePageSpecific();
+    initializePerformanceMonitoring();
+    initializeLazyLoading();
+    console.log('🚀 Portfolio loaded successfully!');
 });
 
 /**
