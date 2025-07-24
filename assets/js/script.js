@@ -338,9 +338,9 @@ function initializeThemeToggle() {
 }
 
 function initializePrintFunctionality() {
-    document.querySelectorAll('.print-btn, .download-btn').forEach(btn => {
+    document.querySelectorAll('.print-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            if (btn.textContent.includes('Download') || btn.textContent.includes('Print')) {
+            if (btn.textContent.includes('Print')) {
                 e.preventDefault();
                 window.print();
             }
