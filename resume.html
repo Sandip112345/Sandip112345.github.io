@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Sandip Budha</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #667eea;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 100px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .download-btn {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Resume Content */
+        .resume-content {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .resume-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Left Sidebar */
+        .resume-sidebar {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            height: fit-content;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img-resume {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .profile-section h2 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-section p {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .contact-info i {
+            color: #667eea;
+            width: 20px;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            background: #e9ecef;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 3px;
+            transition: width 2s ease;
+        }
+
+        .languages-list {
+            list-style: none;
+        }
+
+        .languages-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .language-level {
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .resume-main {
+            padding-left: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            text-align: justify;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-company {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .timeline-description ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Projects Summary */
+        .projects-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-summary-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-summary-card h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-summary-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            header, .page-header, footer {
+                display: none;
+            }
+            
+            main {
+                padding-top: 0;
+            }
+            
+            .resume-content {
+                padding: 20px 0;
+            }
+            
+            .resume-container {
+                grid-template-columns: 1fr 2fr;
+                gap: 2rem;
+            }
+            
+            body {
+                background: white;
+            }
+            
+            .resume-sidebar {
+                background: #f8f9fa;
+            }
+            
+            .download-btn {
+                display: none;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .resume-main {
+                padding-left: 0;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .projects-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Sandip Budha</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">My Resume</h1>
+                <p class="page-subtitle">Full Stack Developer seeking internship opportunities in Kathmandu</p>
+                <a href="#" class="download-btn" onclick="window.print()">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </a>
+            </div>
+        </section>
+
+        <!-- Resume Content -->
+        <section class="resume-content">
+            <div class="container">
+                <div class="resume-container">
+                    <!-- Left Sidebar -->
+                    <div class="resume-sidebar">
+                        <!-- Profile -->
+                        <div class="profile-section">
+                            <div class="profile-img-resume">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h2>Sandip Budha</h2>
+                            <p>Full Stack Developer</p>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Contact</h3>
+                            <ul class="contact-info">
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <span>sandip.budha@example.com</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <span>+977-xxx-xxx-xxxx</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Kathmandu, Nepal</span>
+                                </li>
+                                <li>
+                                    <i class="fab fa-github"></i>
+                                    <span>github.com/sandipbudha</span>
+                                </li>
+                                <li>
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>linkedin.com/in/sandipbudha</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Technical Skills</h3>
+                            <ul class="skills-list">
+                                <li class="skill-item">
+                                    <div class="skill-name">
+                                        <span>HTML5/CSS3</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 95%"></div>
+                                    </div>
+                                </li>
+                                <li class="skill-item">
+                                    <div class="skill-name">
+                                        <span>JavaScript</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%"></div>
+                                    </div>
+                                </li>
+                                <li class="skill-item">
+                                    <div class="skill-name">
+                                        <span>PHP</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%"></div>
+                                    </div>
+                                </li>
+                                <li class="skill-item">
+                                    <div class="skill-name">
+                                        <span>Python</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%"></div>
+                                    </div>
+                                </li>
+                                <li class="skill-item">
+                                    <div class="skill-name">
+                                        <span>MySQL</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%"></div>
+                                    </div>
+                                </li>
+                                <li class="skill-item">
+                                    <div class="skill-name">
+                                        <span>React.js</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 75%"></div>
+                                    </div>
+                                </li>
+                                <li class="skill-item">
+                                    <div class="skill-name">
+                                        <span>Android</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Languages -->
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Languages</h3>
+                            <ul class="languages-list">
+                                <li>
+                                    <span>Nepali</span>
+                                    <span class="language-level">Native</span>
+                                </li>
+                                <li>
+                                    <span>English</span>
+                                    <span class="language-level">Fluent</span>
+                                </li>
+                                <li>
+                                    <span>Hindi</span>
+                                    <span class="language-level">Conversational</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="resume-main">
+                        <!-- Professional Summary -->
+                        <div class="section">
+                            <h2 class="section-title">Professional Summary</h2>
+                            <p class="summary">
+                                Passionate and dedicated Full Stack Developer with 2+ years of experience in web development, mobile applications, and IoT projects. Proficient in modern web technologies including HTML5, CSS3, JavaScript, PHP, Python, and React.js. Strong background in database design and management with MySQL and MongoDB. Experienced in Android app development using Java and Android Studio. Currently seeking internship opportunities in Kathmandu to apply technical skills in a professional environment and contribute to innovative projects while continuing to learn and grow as a developer.
+                            </p>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="section">
+                            <h2 class="section-title">Education</h2>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2023 - Present</div>
+                                    <h3 class="timeline-title">Bachelor in Computer Science</h3>
+                                    <p class="timeline-company">Tribhuvan University, Kathmandu</p>
+                                    <div class="timeline-description">
+                                        <p>Currently pursuing Bachelor's degree with focus on:</p>
+                                        <ul>
+                                            <li>Software Engineering and Development</li>
+                                            <li>Data Structures and Algorithms</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Web Technologies and Programming</li>
+                                            <li>Mobile Application Development</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2021 - 2023</div>
+                                    <h3 class="timeline-title">Higher Secondary Education (+2 Science)</h3>
+                                    <p class="timeline-company">Science Faculty, Kathmandu</p>
+                                    <div class="timeline-description">
+                                        <p>Completed with distinction in Physics, Chemistry, Mathematics, and Computer Science. Achieved 85% overall grade with special focus on computer programming and mathematics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="section">
+                            <h2 class="section-title">Experience</h2>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2024 - Present</div>
+                                    <h3 class="timeline-title">Freelance Web Developer</h3>
+                                    <p class="timeline-company">Self-Employed</p>
+                                    <div class="timeline-description">
+                                        <p>Developed web applications and mobile apps for local businesses and startups:</p>
+                                        <ul>
+                                            <li>Built responsive websites using HTML5, CSS3, and JavaScript</li>
+                                            <li>Developed e-commerce solutions with PHP and MySQL</li>
+                                            <li>Created mobile applications using Android Studio</li>
+                                            <li>Implemented IoT solutions for smart monitoring systems</li>
+                                            <li>Managed client relationships and project timelines</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2023 - 2024</div>
+                                    <h3 class="timeline-title">Computer Lab Assistant</h3>
+                                    <p class="timeline-company">Local Computer Institute</p>
+                                    <div class="timeline-description">
+                                        <p>Assisted students with computer fundamentals and programming:</p>
+                                        <ul>
+                                            <li>Taught basic programming concepts in C, C++, and Java</li>
+                                            <li>Helped students with web development projects</li>
+                                            <li>Maintained computer lab equipment and software</li>
+                                            <li>Organized coding workshops and competitions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Projects -->
+                        <div class="section">
+                            <h2 class="section-title">Key Projects</h2>
+                            <div class="projects-summary">
+                                <div class="project-summary-card">
+                                    <h4>E-Learning Management System</h4>
+                                    <p>Comprehensive learning platform with course management, student enrollment, and progress tracking.</p>
+                                    <div class="project-tech-tags">
+                                        <span class="tech-tag">PHP</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Bootstrap</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-summary-card">
+                                    <h4>Smart Farmers Mobile App</h4>
+                                    <p>Android application helping farmers with crop management and weather updates.</p>
+                                    <div class="project-tech-tags">
+                                        <span class="tech-tag">Android Studio</span>
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">SQLite</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-summary-card">
+                                    <h4>IoT Fire Detection System</h4>
+                                    <p>Smart fire detection system using Arduino and real-time alerts via Firebase.</p>
+                                    <div class="project-tech-tags">
+                                        <span class="tech-tag">Arduino</span>
+                                        <span class="tech-tag">Firebase</span>
+                                        <span class="tech-tag">IoT</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-summary-card">
+                                    <h4>Interactive Quiz Application</h4>
+                                    <p>Dynamic quiz platform with real-time scoring and progress tracking.</p>
+                                    <div class="project-tech-tags">
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Achievements -->
+                        <div class="section">
+                            <h2 class="section-title">Achievements & Certifications</h2>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2024</div>
+                                    <h3 class="timeline-title">Full Stack Web Development Certification</h3>
+                                    <p class="timeline-company">FreeCodeCamp</p>
+                                    <div class="timeline-description">
+                                        <p>Completed 300+ hours of coursework covering React.js, Node.js, Express, and MongoDB.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2024</div>
+                                    <h3 class="timeline-title">Android App Development</h3>
+                                    <p class="timeline-company">Google Developers</p>
+                                    <div class="timeline-description">
+                                        <p>Professional certification in Android development with Java and Android Studio.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2024</div>
+                                    <h3 class="timeline-title">Best Project Award</h3>
+                                    <p class="timeline-company">College Tech Fest</p>
+                                    <div class="timeline-description">
+                                        <p>Won first place for IoT Fire Detection System at annual college technology festival.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #222; color: white; text-align: center; padding: 2rem 0;">
+        <div class="container">
+            <p>&copy; 2025 Sandip Budha. All rights reserved. Built with ❤️ in Kathmandu</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animate skill bars on scroll
+        const observerOptions = {
+            threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-progress');
+                    skillBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(document.querySelector('.resume-sidebar'));
+
+        // Print functionality
+        function printResume() {
+            window.print();
+        }
+
+        // Add smooth animations to timeline items
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }
+            });
+        }, { threshold: 0.2 });
+
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-20px)';
+            item.style.transition = 'all 0.6s ease';
+            timelineObserver.observe(item);
+        });
+    </script>
+</body>
+</html>

@@ -129,7 +129,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 3rem;
         }
 
@@ -140,6 +140,7 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border: 1px solid #f0f0f0;
+            position: relative;
         }
 
         .project-card:hover {
@@ -148,13 +149,13 @@
         }
 
         .project-image {
-            height: 250px;
+            height: 200px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 4rem;
+            font-size: 3rem;
             position: relative;
             overflow: hidden;
         }
@@ -170,12 +171,34 @@
             background-size: 20px 20px;
         }
 
+        .project-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-completed {
+            background: rgba(40, 167, 69, 0.9);
+            color: white;
+        }
+
+        .status-ongoing {
+            background: rgba(255, 193, 7, 0.9);
+            color: white;
+        }
+
         .project-content {
             padding: 2rem;
         }
 
         .project-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
             color: #333;
         }
@@ -184,6 +207,38 @@
             color: #666;
             margin-bottom: 1.5rem;
             line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .project-features {
+            margin-bottom: 1.5rem;
+        }
+
+        .features-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.8rem;
+        }
+
+        .features-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .features-list li {
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features-list i {
+            color: #667eea;
+            font-size: 0.7rem;
         }
 
         .project-tech {
@@ -196,8 +251,8 @@
         .tech-tag {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
             font-size: 0.8rem;
             font-weight: 500;
         }
@@ -210,13 +265,14 @@
 
         .project-link {
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0.7rem 1.3rem;
             border-radius: 25px;
             font-weight: 600;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 0.9rem;
         }
 
         .link-primary {
@@ -238,28 +294,6 @@
         .link-secondary:hover {
             background: #667eea;
             color: white;
-        }
-
-        .project-status {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.9);
-            color: #667eea;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .status-completed {
-            background: rgba(40, 167, 69, 0.1);
-            color: #28a745;
-        }
-
-        .status-ongoing {
-            background: rgba(255, 193, 7, 0.1);
-            color: #ffc107;
         }
 
         /* Stats Section */
@@ -313,6 +347,10 @@
                 flex-direction: column;
             }
 
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
             .nav-links {
                 display: none;
             }
@@ -353,7 +391,6 @@
                     <button class="filter-btn" data-filter="web">Web Development</button>
                     <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
                     <button class="filter-btn" data-filter="iot">IoT Projects</button>
-                    <button class="filter-btn" data-filter="other">Other</button>
                 </div>
             </div>
         </section>
@@ -370,7 +407,20 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Interactive Quiz Application</h3>
-                            <p class="project-description">A dynamic quiz platform featuring real-time scoring, progress tracking, and multiple question types. Built with vanilla JavaScript for optimal performance and user experience.</p>
+                            <p class="project-description">A dynamic quiz platform featuring real-time scoring, progress tracking, and multiple question types. Built with vanilla JavaScript for optimal performance and user experience with timer functionality and local storage.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Multiple quiz categories</li>
+                                    <li><i class="fas fa-check"></i> Real-time scoring</li>
+                                    <li><i class="fas fa-check"></i> Timer functionality</li>
+                                    <li><i class="fas fa-check"></i> Progress tracking</li>
+                                    <li><i class="fas fa-check"></i> Local storage support</li>
+                                    <li><i class="fas fa-check"></i> Responsive design</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
                                 <span class="tech-tag">HTML5</span>
                                 <span class="tech-tag">CSS3</span>
@@ -378,8 +428,8 @@
                                 <span class="tech-tag">Local Storage</span>
                             </div>
                             <div class="project-links">
-                                <a href="projects/quiz-app.html" class="project-link link-primary">
-                                    <i class="fas fa-eye"></i> View Details
+                                <a href="#" class="project-link link-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
@@ -396,7 +446,20 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">E-Learning Management System</h3>
-                            <p class="project-description">Comprehensive learning platform with course management, student enrollment, progress tracking, and interactive assignments. Features admin panel and student dashboard.</p>
+                            <p class="project-description">Comprehensive learning platform with course management, student enrollment, progress tracking, and interactive assignments. Features admin panel for teachers and student dashboard with video streaming capabilities.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Course management</li>
+                                    <li><i class="fas fa-check"></i> Student enrollment</li>
+                                    <li><i class="fas fa-check"></i> Video streaming</li>
+                                    <li><i class="fas fa-check"></i> Assignment system</li>
+                                    <li><i class="fas fa-check"></i> Grade tracking</li>
+                                    <li><i class="fas fa-check"></i> Discussion forums</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
                                 <span class="tech-tag">PHP</span>
                                 <span class="tech-tag">MySQL</span>
@@ -404,8 +467,8 @@
                                 <span class="tech-tag">jQuery</span>
                             </div>
                             <div class="project-links">
-                                <a href="projects/e-learning.html" class="project-link link-primary">
-                                    <i class="fas fa-eye"></i> View Details
+                                <a href="#" class="project-link link-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
@@ -422,7 +485,20 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Smart Farmers Mobile App</h3>
-                            <p class="project-description">Android application helping farmers with crop management, weather updates, market prices, and agricultural tips. Designed specifically for Nepali farmers.</p>
+                            <p class="project-description">Android application helping farmers with crop management, weather updates, market prices, and agricultural tips. Designed specifically for Nepali farmers with multi-language support and offline capabilities.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Crop management</li>
+                                    <li><i class="fas fa-check"></i> Weather forecasts</li>
+                                    <li><i class="fas fa-check"></i> Market prices</li>
+                                    <li><i class="fas fa-check"></i> Agricultural tips</li>
+                                    <li><i class="fas fa-check"></i> Multi-language</li>
+                                    <li><i class="fas fa-check"></i> Offline support</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
                                 <span class="tech-tag">Android Studio</span>
                                 <span class="tech-tag">Java</span>
@@ -430,8 +506,8 @@
                                 <span class="tech-tag">Weather API</span>
                             </div>
                             <div class="project-links">
-                                <a href="projects/farmers-app.html" class="project-link link-primary">
-                                    <i class="fas fa-eye"></i> View Details
+                                <a href="#" class="project-link link-primary" target="_blank">
+                                    <i class="fab fa-google-play"></i> Play Store
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
@@ -448,7 +524,20 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">IoT Fire Detection System</h3>
-                            <p class="project-description">Smart fire detection system using Arduino, smoke sensors, and real-time alerts. Integrates with Firebase for remote monitoring and mobile notifications.</p>
+                            <p class="project-description">Smart fire detection system using Arduino, smoke sensors, and real-time alerts. Integrates with Firebase for remote monitoring and mobile notifications with SMS alerts and web dashboard for monitoring.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Smoke detection</li>
+                                    <li><i class="fas fa-check"></i> Temperature monitoring</li>
+                                    <li><i class="fas fa-check"></i> Real-time alerts</li>
+                                    <li><i class="fas fa-check"></i> Mobile notifications</li>
+                                    <li><i class="fas fa-check"></i> Web dashboard</li>
+                                    <li><i class="fas fa-check"></i> SMS alerts</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
                                 <span class="tech-tag">Arduino</span>
                                 <span class="tech-tag">Firebase</span>
@@ -456,8 +545,8 @@
                                 <span class="tech-tag">IoT Sensors</span>
                             </div>
                             <div class="project-links">
-                                <a href="projects/iot-fire-system.html" class="project-link link-primary">
-                                    <i class="fas fa-eye"></i> View Details
+                                <a href="#" class="project-link link-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Demo Video
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
@@ -474,7 +563,20 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Digital Library System</h3>
-                            <p class="project-description">Modern library management system with book cataloging, user management, borrowing system, and digital book reading capabilities. Features search and recommendation engine.</p>
+                            <p class="project-description">Modern library management system with book cataloging, user management, borrowing system, and digital book reading capabilities. Features advanced search, recommendation engine, and book reservation system.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Book cataloging</li>
+                                    <li><i class="fas fa-check"></i> User management</li>
+                                    <li><i class="fas fa-check"></i> Digital reading</li>
+                                    <li><i class="fas fa-check"></i> Search engine</li>
+                                    <li><i class="fas fa-check"></i> Recommendations</li>
+                                    <li><i class="fas fa-check"></i> Book reservations</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
                                 <span class="tech-tag">React.js</span>
                                 <span class="tech-tag">Node.js</span>
@@ -482,8 +584,8 @@
                                 <span class="tech-tag">Express.js</span>
                             </div>
                             <div class="project-links">
-                                <a href="projects/e-library.html" class="project-link link-primary">
-                                    <i class="fas fa-eye"></i> View Details
+                                <a href="#" class="project-link link-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Preview
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
@@ -492,24 +594,37 @@
                         </div>
                     </div>
 
-                    <!-- Project 6: Personal Blog -->
-                    <div class="project-card" data-category="web">
+                    <!-- Project 6: Weather App -->
+                    <div class="project-card" data-category="mobile">
                         <div class="project-image">
-                            <i class="fas fa-blog"></i>
+                            <i class="fas fa-cloud-sun"></i>
                             <div class="project-status status-completed">Completed</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Personal Tech Blog</h3>
-                            <p class="project-description">Responsive blog platform with content management system, comment functionality, and social media integration. Features markdown support and SEO optimization.</p>
+                            <h3 class="project-title">Nepal Weather App</h3>
+                            <p class="project-description">Mobile weather application providing real-time weather data for major cities in Nepal. Features weather forecasts, severe weather alerts, location-based services, and beautiful weather animations.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Real-time weather</li>
+                                    <li><i class="fas fa-check"></i> 7-day forecasts</li>
+                                    <li><i class="fas fa-check"></i> Weather alerts</li>
+                                    <li><i class="fas fa-check"></i> GPS location</li>
+                                    <li><i class="fas fa-check"></i> Weather animations</li>
+                                    <li><i class="fas fa-check"></i> Multiple cities</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Weather API</span>
+                                <span class="tech-tag">GPS</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link link-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                <a href="#" class="project-link link-primary" target="_blank">
+                                    <i class="fab fa-google-play"></i> Play Store
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
@@ -526,15 +641,28 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Task Management System</h3>
-                            <p class="project-description">Productivity app with drag-and-drop task organization, team collaboration features, deadline tracking, and progress visualization. Kanban-style interface.</p>
+                            <p class="project-description">Productivity app with drag-and-drop task organization, team collaboration features, deadline tracking, and progress visualization. Kanban-style interface with calendar integration and time tracking.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Drag & drop tasks</li>
+                                    <li><i class="fas fa-check"></i> Team collaboration</li>
+                                    <li><i class="fas fa-check"></i> Deadline tracking</li>
+                                    <li><i class="fas fa-check"></i> Progress charts</li>
+                                    <li><i class="fas fa-check"></i> Calendar view</li>
+                                    <li><i class="fas fa-check"></i> Time tracking</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
                                 <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">CSS3</span>
                                 <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">Local Storage</span>
+                                <span class="tech-tag">Chart.js</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link link-primary">
+                                <a href="#" class="project-link link-primary" target="_blank">
                                     <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
@@ -544,24 +672,37 @@
                         </div>
                     </div>
 
-                    <!-- Project 8: Weather App -->
-                    <div class="project-card" data-category="mobile">
+                    <!-- Project 8: Portfolio Website -->
+                    <div class="project-card" data-category="web">
                         <div class="project-image">
-                            <i class="fas fa-cloud-sun"></i>
+                            <i class="fas fa-user-tie"></i>
                             <div class="project-status status-completed">Completed</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Nepal Weather App</h3>
-                            <p class="project-description">Mobile weather application providing real-time weather data for major cities in Nepal. Features weather forecasts, alerts, and location-based services.</p>
+                            <h3 class="project-title">Personal Portfolio Website</h3>
+                            <p class="project-description">Modern, responsive portfolio website showcasing projects, skills, and experience. Features smooth animations, contact forms, and optimized performance with clean, professional design and SEO optimization.</p>
+                            
+                            <div class="project-features">
+                                <div class="features-title">Key Features:</div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Responsive design</li>
+                                    <li><i class="fas fa-check"></i> Smooth animations</li>
+                                    <li><i class="fas fa-check"></i> Contact forms</li>
+                                    <li><i class="fas fa-check"></i> SEO optimized</li>
+                                    <li><i class="fas fa-check"></i> Fast loading</li>
+                                    <li><i class="fas fa-check"></i> GitHub Pages</li>
+                                </ul>
+                            </div>
+
                             <div class="project-tech">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Dart</span>
-                                <span class="tech-tag">Weather API</span>
-                                <span class="tech-tag">GPS</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">GitHub Pages</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link link-primary">
-                                    <i class="fas fa-eye"></i> View Details
+                                <a href="#" class="project-link link-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Visit Site
                                 </a>
                                 <a href="#" class="project-link link-secondary" target="_blank">
                                     <i class="fab fa-github"></i> GitHub
