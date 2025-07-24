@@ -133,38 +133,176 @@ nav {
   animation: fadeInUp 1s ease 0.4s both;
 }
 
-.btn {
+.btn,
+.cta-btn,
+.submit-btn,
+.download-btn,
+.print-btn {
   padding: 12px 30px;
   border: none;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  box-shadow: 0 2px 10px rgba(102,126,234,0.08);
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-primary {
-  background: white;
-  color: #667eea;
+.btn-primary,
+.cta-btn,
+.download-btn,
+.submit-btn {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.btn-primary:hover,
+.cta-btn:hover,
+.download-btn:hover,
+.submit-btn:hover {
+  background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(102,126,234,0.18);
+  transform: translateY(-2px) scale(1.04);
 }
 
-.btn-secondary {
+.btn-secondary,
+.cta-btn.secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #667eea;
+  border: 2px solid #667eea;
 }
 
-.btn-secondary:hover {
-  background: white;
+.btn-secondary:hover,
+.cta-btn.secondary:hover {
+  background: #667eea;
+  color: #fff;
+  border-color: #764ba2;
+}
+
+.print-btn {
+  background: #fff;
   color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.print-btn:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+.download-btn {
+  background: #fff;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.download-btn:hover {
+  background: #667eea;
+  color: #fff;
+  border-color: #764ba2;
+}
+
+/* --- Button Icon Animation --- */
+.btn i,
+.cta-btn i,
+.download-btn i,
+.submit-btn i {
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.btn:hover i,
+.cta-btn:hover i,
+.download-btn:hover i,
+.submit-btn:hover i {
+  transform: translateX(4px) scale(1.1);
+}
+
+/* --- Restore Old Theme Colors --- */
+body {
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: rgba(255,255,255,0.95);
+  color: #333;
+}
+
+.section-title,
+.page-title,
+.resume-main h2,
+.resume-sidebar h2 {
+  color: #333;
+}
+
+a {
+  color: #667eea;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #764ba2;
+}
+
+/* --- Improve Contrast for Accessibility --- */
+.btn:focus,
+.cta-btn:focus,
+.download-btn:focus,
+.submit-btn:focus {
+  outline: 2px solid #764ba2;
+  outline-offset: 2px;
+}
+
+/* --- Add Button Shadow for Depth --- */
+.btn,
+.cta-btn,
+.download-btn,
+.submit-btn {
+  box-shadow: 0 2px 10px rgba(102,126,234,0.08);
+}
+
+.btn:active,
+.cta-btn:active,
+.download-btn:active,
+.submit-btn:active {
+  box-shadow: 0 1px 4px rgba(102,126,234,0.18);
+  transform: scale(0.98);
+}
+
+/* --- Responsive Button Sizing --- */
+@media (max-width: 480px) {
+  .btn,
+  .cta-btn,
+  .download-btn,
+  .submit-btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Utility Classes for Buttons --- */
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-lg {
+  font-size: 1.2rem;
+  padding: 16px 40px;
+}
+
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 8px 18px;
 }
 
 /* Skills Section */
@@ -399,9 +537,12 @@ footer {
     font-size: 2rem;
   }
 
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+  .btn,
+  .cta-btn,
+  .download-btn,
+  .submit-btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
   }
 }
 
