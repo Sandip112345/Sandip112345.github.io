@@ -36,19 +36,23 @@ function initializeNavigation() {
         });
     });
 
-   
-
-    // Mobile menu toggle
+    // Mobile menu toggle (vertical, with close button)
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelector('.nav-links');
-    if (mobileMenu && navLinks) {
+    const navClose = document.querySelector('.nav-close');
+    if (mobileMenu && navLinks && navClose) {
         mobileMenu.addEventListener('click', () => {
-            navLinks.style.display =
-                navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+        navClose.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            document.body.style.overflow = '';
         });
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.style.display = 'none';
+                navLinks.classList.remove('open');
+                document.body.style.overflow = '';
             });
         });
     }
