@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -20,23 +20,30 @@
       <nav class="container">
         <a href="index.html" class="logo">Sandip Budha</a>
         <ul class="nav-links">
+          <button class="nav-close" aria-label="Close Menu">&times;</button>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="certificates.html">Certificates</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="mobile-menu">
+        <button class="mobile-menu" aria-label="Open Menu">
           <i class="fas fa-bars"></i>
-        </div>
+        </button>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
       <!-- Page Header -->
-      <section class="page-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+      <section
+        class="page-header"
+        style="
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+        "
+      >
         <div class="container">
           <h1 class="page-title">My Resume</h1>
           <p class="page-subtitle">
@@ -46,7 +53,7 @@
             href="assets/images/Sandip_Budha_CV.pdf"
             class="download-btn"
             download
-            style="background: #fff; color: #667eea;"
+            style="background: #fff; color: #667eea"
           >
             <i class="fas fa-download"></i>
             Download PDF
@@ -55,9 +62,12 @@
       </section>
 
       <!-- Resume Content -->
-      <section class="resume-content" style="background: #fff; color: #333;">
+      <section class="resume-content" style="background: #fff; color: #333">
         <div class="container">
-          <div class="resume-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <div
+            class="resume-container"
+            style="display: flex; gap: 2rem; flex-wrap: wrap"
+          >
             <!-- Left Sidebar -->
             <aside class="resume-sidebar">
               <!-- Profile -->
@@ -65,45 +75,57 @@
                 <div class="profile-img-resume">
                   <i class="fas fa-user"></i>
                 </div>
-                <h2 style="color: #333;">Sandip Budha</h2>
-                <p style="color: #667eea;">Programmer</p>
+                <h2 style="color: #333">Sandip Budha</h2>
+                <p style="color: #667eea">Programmer</p>
               </div>
 
               <!-- Contact Information -->
               <div class="sidebar-section">
-                <h3 class="sidebar-title" style="color: #333;">Contact</h3>
+                <h3 class="sidebar-title" style="color: #333">Contact</h3>
                 <ul class="contact-info">
                   <li>
                     <i class="fas fa-envelope"></i>
-                    <span style="color: #333;">sandybudha62@gmail.com</span>
+                    <span style="color: #333">sandybudha62@gmail.com</span>
                   </li>
                   <li>
                     <i class="fas fa-phone"></i>
-                    <span style="color: #333;">+977 9863081555</span>
+                    <span style="color: #333">+977 9863081555</span>
                   </li>
                   <li>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span style="color: #333;">Kathmandu, Nepal</span>
+                    <span style="color: #333">Kathmandu, Nepal</span>
                   </li>
                   <li>
                     <i class="fab fa-github"></i>
-                    <a href="https://github.com/Sandip112345" target="_blank" style="color: #333; text-decoration: none;">GitHub</a>
+                    <a
+                      href="https://github.com/Sandip112345"
+                      target="_blank"
+                      style="color: #333; text-decoration: none"
+                      >GitHub</a
+                    >
                   </li>
                   <li>
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/sandip-budha-632a61287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #333; text-decoration: none;">LinkedIn</a>
+                    <a
+                      href="https://www.linkedin.com/in/sandip-budha-632a61287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      style="color: #333; text-decoration: none"
+                      >LinkedIn</a
+                    >
                   </li>
                 </ul>
               </div>
 
               <!-- Skills -->
               <div class="sidebar-section">
-                <h3 class="sidebar-title" style="color: #333;">Technical Skills</h3>
+                <h3 class="sidebar-title" style="color: #333">
+                  Technical Skills
+                </h3>
                 <ul class="skills-list">
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span style="color: #333;">Python</span>
-                      <span style="color: #333;">90%</span>
+                      <span style="color: #333">Python</span>
+                      <span style="color: #333">90%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 90%"></div>
@@ -111,8 +133,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span style="color: #333;">HTML5/CSS3</span>
-                      <span style="color: #333;">80%</span>
+                      <span style="color: #333">HTML5/CSS3</span>
+                      <span style="color: #333">80%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 80%"></div>
@@ -120,8 +142,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span style="color: #333;">JavaScript</span>
-                      <span style="color: #333;">50%</span>
+                      <span style="color: #333">JavaScript</span>
+                      <span style="color: #333">50%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 50%"></div>
@@ -129,8 +151,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span style="color: #333;">PHP</span>
-                      <span style="color: #333;">60%</span>
+                      <span style="color: #333">PHP</span>
+                      <span style="color: #333">60%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 60%"></div>
@@ -138,8 +160,8 @@
                   </li>
                   <li class="skill-item">
                     <div class="skill-name">
-                      <span style="color: #333;">MySQL</span>
-                      <span style="color: #333;">85%</span>
+                      <span style="color: #333">MySQL</span>
+                      <span style="color: #333">85%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 85%"></div>
@@ -150,30 +172,38 @@
 
               <!-- Languages -->
               <div class="sidebar-section">
-                <h3 class="sidebar-title" style="color: #333;">Languages</h3>
+                <h3 class="sidebar-title" style="color: #333">Languages</h3>
                 <ul class="languages-list">
                   <li>
-                    <span style="color: #333;">Nepali</span>
-                    <span class="language-level" style="color: #667eea;">Native</span>
+                    <span style="color: #333">Nepali</span>
+                    <span class="language-level" style="color: #667eea"
+                      >Native</span
+                    >
                   </li>
                   <li>
-                    <span style="color: #333;">English</span>
-                    <span class="language-level" style="color: #667eea;">Fluent</span>
+                    <span style="color: #333">English</span>
+                    <span class="language-level" style="color: #667eea"
+                      >Fluent</span
+                    >
                   </li>
                   <li>
-                    <span style="color: #333;">Hindi</span>
-                    <span class="language-level" style="color: #667eea;">Conversational</span>
+                    <span style="color: #333">Hindi</span>
+                    <span class="language-level" style="color: #667eea"
+                      >Conversational</span
+                    >
                   </li>
                 </ul>
               </div>
             </aside>
 
             <!-- Main Content -->
-            <section class="resume-main" style="flex: 1 1 400px;">
+            <section class="resume-main" style="flex: 1 1 400px">
               <!-- Professional Summary -->
               <div class="section">
-                <h2 class="section-title" style="color: #333;">Professional Summary</h2>
-                <p class="summary" style="color: #666;">
+                <h2 class="section-title" style="color: #333">
+                  Professional Summary
+                </h2>
+                <p class="summary" style="color: #666">
                   Motivated and detail-oriented Computer Science undergraduate
                   specializing in Cybersecurity, with a strong foundation in
                   programming, web development, and IoT systems. Proficient in
@@ -191,34 +221,51 @@
 
               <!-- Education -->
               <div class="section">
-                <h2 class="section-title" style="color: #333;">Education</h2>
+                <h2 class="section-title" style="color: #333">Education</h2>
                 <div class="timeline">
                   <div class="timeline-item">
-                    <div class="timeline-date" style="color: #667eea;">2022 - Present</div>
-                    <h3 class="timeline-title" style="color: #333;">Bachelor in Computer Science</h3>
-                    <p class="timeline-company" style="color: #666;">
+                    <div class="timeline-date" style="color: #667eea">
+                      2022 - Present
+                    </div>
+                    <h3 class="timeline-title" style="color: #333">
+                      Bachelor in Computer Science
+                    </h3>
+                    <p class="timeline-company" style="color: #666">
                       IIMS College Affiliated with Taylors University, Kathmandu
                     </p>
                     <div class="timeline-description">
-                      <p style="color: #666;">Currently pursuing Bachelor's degree with focus on:</p>
+                      <p style="color: #666">
+                        Currently pursuing Bachelor's degree with focus on:
+                      </p>
                       <ul>
-                        <li style="color: #666;">Software Engineering and Development</li>
-                        <li style="color: #666;">Database Management Systems</li>
-                        <li style="color: #666;">Web Technologies and Programming</li>
-                        <li style="color: #666;">Cybersecurity specialization</li>
+                        <li style="color: #666">
+                          Software Engineering and Development
+                        </li>
+                        <li style="color: #666">Database Management Systems</li>
+                        <li style="color: #666">
+                          Web Technologies and Programming
+                        </li>
+                        <li style="color: #666">
+                          Cybersecurity specialization
+                        </li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="timeline-item">
-                    <div class="timeline-date" style="color: #667eea;">2019 - 2020</div>
-                    <h3 class="timeline-title" style="color: #333;">
+                    <div class="timeline-date" style="color: #667eea">
+                      2019 - 2020
+                    </div>
+                    <h3 class="timeline-title" style="color: #333">
                       Higher Secondary Education (+2 Science)
                     </h3>
-                    <p class="timeline-company" style="color: #666;">Galaxy Higher Secondary School, Dhangadhi</p>
+                    <p class="timeline-company" style="color: #666">
+                      Galaxy Higher Secondary School, Dhangadhi
+                    </p>
                     <div class="timeline-description">
-                      <p style="color: #666;">
-                        Completed with 3.34 and 3.08 GPAs in 11th and 12th respectively with Science Major.
+                      <p style="color: #666">
+                        Completed with 3.34 and 3.08 GPAs in 11th and 12th
+                        respectively with Science Major.
                       </p>
                     </div>
                   </div>
@@ -227,29 +274,36 @@
 
               <!-- Experience -->
               <div class="section">
-                <h2 class="section-title" style="color: #333;">Experience</h2>
+                <h2 class="section-title" style="color: #333">Experience</h2>
                 <div class="timeline">
                   <div class="timeline-item">
-                    <div class="timeline-date" style="color: #667eea;">2022 - Present</div>
-                    <h3 class="timeline-title" style="color: #333;">Student</h3>
-                    <p class="timeline-company" style="color: #666;">Self-Employed</p>
+                    <div class="timeline-date" style="color: #667eea">
+                      2022 - Present
+                    </div>
+                    <h3 class="timeline-title" style="color: #333">Student</h3>
+                    <p class="timeline-company" style="color: #666">
+                      Self-Employed
+                    </p>
                     <div class="timeline-description">
-                      <p style="color: #666;">
-                        Developed web applications and mobile apps for college projects:
+                      <p style="color: #666">
+                        Developed web applications and mobile apps for college
+                        projects:
                       </p>
                       <ul>
-                        <li style="color: #666;">
+                        <li style="color: #666">
                           Built responsive websites using HTML5, CSS3, and
                           JavaScript
                         </li>
-                        <li style="color: #666;">
+                        <li style="color: #666">
                           Developed E-Library solutions with PHP and MySQL
                         </li>
-                        <li style="color: #666;">
-                          Created mobile applications using React Native and Expo
+                        <li style="color: #666">
+                          Created mobile applications using React Native and
+                          Expo
                         </li>
-                        <li style="color: #666;">
-                          Implemented IoT solutions for smart fire detection systems
+                        <li style="color: #666">
+                          Implemented IoT solutions for smart fire detection
+                          systems
                         </li>
                       </ul>
                     </div>
@@ -259,11 +313,11 @@
 
               <!-- Key Projects -->
               <div class="section">
-                <h2 class="section-title" style="color: #333;">Key Projects</h2>
+                <h2 class="section-title" style="color: #333">Key Projects</h2>
                 <div class="projects-summary">
                   <div class="project-summary-card">
-                    <h4 style="color: #333;">E-Learning Management System</h4>
-                    <p style="color: #666;">
+                    <h4 style="color: #333">E-Learning Management System</h4>
+                    <p style="color: #666">
                       Comprehensive learning platform with course management,
                       student enrollment, and progress tracking.
                     </p>
@@ -274,8 +328,8 @@
                   </div>
 
                   <div class="project-summary-card">
-                    <h4 style="color: #333;">Smart Farmers Mobile App</h4>
-                    <p style="color: #666;">
+                    <h4 style="color: #333">Smart Farmers Mobile App</h4>
+                    <p style="color: #666">
                       Android application helping farmers with crop management
                       and weather updates.
                     </p>
@@ -287,8 +341,8 @@
                   </div>
 
                   <div class="project-summary-card">
-                    <h4 style="color: #333;">IoT Fire Detection System</h4>
-                    <p style="color: #666;">
+                    <h4 style="color: #333">IoT Fire Detection System</h4>
+                    <p style="color: #666">
                       Smart fire detection system using Arduino and real-time
                       alerts via Firebase.
                     </p>
@@ -299,8 +353,8 @@
                   </div>
 
                   <div class="project-summary-card">
-                    <h4 style="color: #333;">Interactive Quiz Application</h4>
-                    <p style="color: #666;">
+                    <h4 style="color: #333">Interactive Quiz Application</h4>
+                    <p style="color: #666">
                       Dynamic quiz platform with real-time scoring and progress
                       tracking.
                     </p>

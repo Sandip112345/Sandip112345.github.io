@@ -488,6 +488,7 @@ footer {
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -497,8 +498,8 @@ footer {
     width: 80vw;
     max-width: 320px;
     height: 100vh;
-    background: rgba(255,255,255,0.98);
-    box-shadow: -2px 0 20px rgba(0,0,0,0.1);
+    background: #222;
+    box-shadow: -2px 0 20px rgba(0,0,0,0.2);
     flex-direction: column;
     gap: 0;
     padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -513,17 +514,41 @@ footer {
   .nav-links li {
     margin-bottom: 1.5rem;
     text-align: left;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+  .nav-links.open li {
+    opacity: 1;
+  }
+  .nav-links:not(.open) li {
+    opacity: 0;
   }
   .nav-links a {
     font-size: 1.2rem;
-    color: #333;
+    color: #fff;
     padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #444;
     display: block;
     transition: color 0.3s;
+    background: transparent;
   }
   .nav-links a:last-child {
     border-bottom: none;
+  }
+  .nav-links.open .nav-close {
+    display: block;
+    color: #fff;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    font-size: 2rem;
+    z-index: 2101;
+    cursor: pointer;
+  }
+  .nav-close {
+    display: none;
   }
   .mobile-menu {
     display: block;
@@ -532,49 +557,14 @@ footer {
     z-index: 2100;
     background: none;
     border: none;
+    color: #fff;
   }
-  .nav-close {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1.2rem;
-    font-size: 2rem;
-    color: #667eea;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 2101;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
+  .nav-links.open .mobile-menu {
+    display: none;
   }
 }
+
+/* ...existing code... */
 
 @media (max-width: 480px) {
   .container {
